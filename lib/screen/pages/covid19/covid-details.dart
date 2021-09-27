@@ -2,7 +2,7 @@ import 'package:better_learn_programming/config/customs.dart';
 import 'package:better_learn_programming/widgets/covid19/covid-info.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'covid-page.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 
 class CovidDetails extends StatefulWidget {
   final int updated;
@@ -136,9 +136,11 @@ class _CovidDetailsState extends State<CovidDetails> {
             Navigator.pop(context); // pops page
           },
         ),
-        title: Text(
+        title: AutoSizeText(
           '${widget.countryName} Covid Updates',
           //textAlign: TextAlign.left,
+          maxLines: 2,
+          minFontSize: 20.0,
           style: GoogleFonts.ubuntu(
             textStyle: TextStyle(
               color: Colors.blueGrey[600],

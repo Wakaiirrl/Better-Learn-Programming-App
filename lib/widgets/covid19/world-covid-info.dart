@@ -33,7 +33,7 @@ class WorldCovidInfo extends StatelessWidget {
               blurRadius: 10)
         ],
       ),
-      height: MediaQuery.of(context).size.height * .35,
+      height: MediaQuery.of(context).size.height * .5,
       width: MediaQuery.of(context).size.width * .45,
       child: Column(
         children: [

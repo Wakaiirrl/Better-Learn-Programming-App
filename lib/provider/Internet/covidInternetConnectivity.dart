@@ -1,17 +1,18 @@
 import 'dart:async';
 import 'package:better_learn_programming/config/error-page.dart';
-import 'package:better_learn_programming/screen/pages/online%20book/online-books-page.dart';
+import 'package:better_learn_programming/screen/pages/covid19/covid-page.dart';
 import 'package:connectivity/connectivity.dart';
 import 'package:flutter/material.dart';
 
-class InternetConnectivity extends StatefulWidget {
-  InternetConnectivity({Key key}) : super(key: key);
+class CovidInternetConnectivity extends StatefulWidget {
+  const CovidInternetConnectivity({Key key}) : super(key: key);
 
   @override
-  _InternetConnectivityState createState() => _InternetConnectivityState();
+  _CovidInternetConnectivityState createState() =>
+      _CovidInternetConnectivityState();
 }
 
-class _InternetConnectivityState extends State<InternetConnectivity> {
+class _CovidInternetConnectivityState extends State<CovidInternetConnectivity> {
   bool isConnected = false;
   StreamSubscription sub;
 
@@ -37,6 +38,6 @@ class _InternetConnectivityState extends State<InternetConnectivity> {
 
   @override
   Widget build(BuildContext context) {
-    return isConnected ? OnlineBookPage() : ErrorPage();
+    return isConnected ? CovidPage() : ErrorPage();
   }
 }

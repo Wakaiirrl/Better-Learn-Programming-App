@@ -1,4 +1,5 @@
-import 'package:better_learn_programming/provider/Internet/connectivity.dart';
+import 'package:better_learn_programming/provider/Internet/bookconnectivity.dart';
+import 'package:better_learn_programming/provider/Internet/covidInternetConnectivity.dart';
 import 'package:better_learn_programming/screen/pages/covid19/covid-page.dart';
 import 'package:better_learn_programming/screen/pages/quiz%20page/quiz-page-welcome.dart';
 import 'package:better_learn_programming/screen/pages/topic-page.dart';
@@ -19,8 +20,8 @@ class _HomePageState extends State<HomePage> {
   final List<Widget> pages = [
     TopicPage(), //0
     QuizWelcomePage(), //1
-    InternetConnectivity(), //2
-    CovidPage(),
+    BookInternetConnectivity(), //2
+    CovidInternetConnectivity(), //3
   ];
 
   @override
