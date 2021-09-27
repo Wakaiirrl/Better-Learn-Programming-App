@@ -1,5 +1,6 @@
 import 'package:better_learn_programming/screen/pages/quiz%20page/quiz-page.dart';
 import 'package:flutter/material.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 
 class QuizWelcomePage extends StatefulWidget {
   const QuizWelcomePage({Key key}) : super(key: key);
@@ -25,14 +26,16 @@ class _QuizWelcomePageState extends State<QuizWelcomePage> {
               height: height * .5,
               width: width * 0.75,
               child: Center(
-                child: Text(
-                  'Test your programming and coding skills with quizzes.\n\nPrepare yourself for the job interview! ',
+                child: AutoSizeText(
+                  'Test your programming and coding skills with quizzes.\nPrepare yourself for the job interview! ',
                   textAlign: TextAlign.center,
+                  minFontSize: 20,
+                  maxLines: 6,
                   style: TextStyle(
                       fontFamily: 'Ubuntu',
                       letterSpacing: 1.3,
                       color: Colors.white,
-                      fontSize: 23,
+                      fontSize: 24,
                       fontWeight: FontWeight.w600),
                 ),
               ),

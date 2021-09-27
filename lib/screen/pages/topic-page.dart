@@ -3,7 +3,7 @@ import 'package:better_learn_programming/widgets/language_grid.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mdi/mdi.dart';
-
+import 'package:auto_size_text/auto_size_text.dart';
 import 'developer-page.dart';
 
 class TopicPage extends StatefulWidget {
@@ -104,20 +104,23 @@ class _TopicPageState extends State<TopicPage> {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 15,
-                    vertical: 0,
+                  padding: const EdgeInsets.only(
+                    left: 15,
                   ),
                   child: Row(
-                    // crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    //crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
-                      Flexible(
+                      Container(
+                        width: width * .5,
                         child: Column(
+                          mainAxisAlignment: MainAxisAlignment.start,
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
-                            Text(
+                            AutoSizeText(
                               'Learn once',
+                              minFontSize: 24,
+                              maxLines: 1,
                               style: GoogleFonts.ubuntu(
                                 textStyle: TextStyle(
                                   color: Color(0xff76424e),
@@ -126,8 +129,10 @@ class _TopicPageState extends State<TopicPage> {
                                 ),
                               ),
                             ),
-                            Text(
+                            AutoSizeText(
                               'Program anywhere!',
+                              minFontSize: 24,
+                              maxLines: 2,
                               style: GoogleFonts.ubuntu(
                                 textStyle: TextStyle(
                                   color: Color(0xff203e4a),
@@ -139,16 +144,20 @@ class _TopicPageState extends State<TopicPage> {
                           ],
                         ),
                       ),
-                      Image.asset(
-                        'images/dev.png',
-                        width: width * .5,
-                        height: height * .25,
-                        alignment: Alignment.centerRight,
+                      Container(
+                        child: FittedBox(
+                          child: Image.asset(
+                            'images/dev.png',
+                            height: height * .25,
+                            width: width * .45,
+                            alignment: Alignment.center,
+                          ),
+                        ),
                       )
                     ],
                   ),
                 ),
-               /* _isBannerAdReady
+                /* _isBannerAdReady
                     ? Align(
                         alignment: Alignment.bottomCenter,
                         child: Container(

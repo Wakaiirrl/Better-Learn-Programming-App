@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:clip_shadow/clip_shadow.dart';
 import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
+import 'package:auto_size_text/auto_size_text.dart';
 
 class TopicsCard extends StatelessWidget {
   final String languageName;
@@ -50,9 +51,12 @@ class TopicsCard extends StatelessWidget {
                     SizedBox(
                       height: height * .01,
                     ),
-                    Flexible(
-                      child: Text(
+                    Container(
+                      width: width,
+                      child: AutoSizeText(
                         '$languageName programming language.',
+                        minFontSize: 15,
+                        maxLines: 3,
                         style: GoogleFonts.cagliostro(
                           textStyle: TextStyle(
                             fontSize: 17,
