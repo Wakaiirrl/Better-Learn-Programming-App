@@ -2,7 +2,7 @@ import 'package:better_learn_programming/provider/online%20books/online-books-pr
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-
+import 'package:auto_size_text/auto_size_text.dart';
 import 'book-details.dart';
 
 class OnlineBookPage extends StatefulWidget {
@@ -185,9 +185,11 @@ class _OnlineBookPageState extends State<OnlineBookPage> {
                                                   padding: const EdgeInsets
                                                           .symmetric(
                                                       horizontal: 10),
-                                                  child: Text(
+                                                  child: AutoSizeText(
                                                     bookObject.getBooksData
                                                         .books[index].title,
+                                                    maxLines: 2,
+                                                    minFontSize: 16,
                                                     textAlign: TextAlign.center,
                                                     style: GoogleFonts.roboto(
                                                       textStyle: TextStyle(

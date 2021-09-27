@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class BottomNavMenu extends StatelessWidget {
   final IconData icon;
@@ -22,10 +23,12 @@ class BottomNavMenu extends StatelessWidget {
         ),
         Text(
           iconInfo,
-          style: TextStyle(
-            color: color,
-            fontFamily: 'Ubuntu',
-            fontSize: 15,
+          style: GoogleFonts.poppins(
+            textStyle: TextStyle(
+              color: Colors.blueGrey[600],
+              fontSize: 22.0,
+              fontWeight: FontWeight.w600,
+            ),
           ),
         )
       ],

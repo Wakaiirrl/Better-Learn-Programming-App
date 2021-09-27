@@ -1,5 +1,6 @@
 //https://simplicable.com/new/light-colors
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 List<BoxShadow> softUiShadow = [
   BoxShadow(
@@ -15,3 +16,7 @@ List<BoxShadow> softUiShadow = [
     blurRadius: 15,
   ),
 ];
+
+final url = 'https://disease.sh/v3/covid-19/countries/';
+String getFormattedDate(int date, String format) =>
+    DateFormat(format).format(DateTime.fromMillisecondsSinceEpoch(date * 1000));

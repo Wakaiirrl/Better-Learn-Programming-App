@@ -1,8 +1,10 @@
 import 'package:better_learn_programming/provider/Internet/connectivity.dart';
+import 'package:better_learn_programming/screen/pages/covid19/covid-page.dart';
 import 'package:better_learn_programming/screen/pages/quiz%20page/quiz-page-welcome.dart';
 import 'package:better_learn_programming/screen/pages/topic-page.dart';
 import 'package:bottom_navy_bar/bottom_navy_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:mdi/mdi.dart';
 
 class HomePage extends StatefulWidget {
@@ -18,6 +20,7 @@ class _HomePageState extends State<HomePage> {
     TopicPage(), //0
     QuizWelcomePage(), //1
     InternetConnectivity(), //2
+    CovidPage(),
   ];
 
   @override
@@ -43,7 +46,16 @@ class _HomePageState extends State<HomePage> {
         },
         items: [
           BottomNavyBarItem(
-            title: Text('Home'),
+            title: Text(
+              'Home',
+              style: GoogleFonts.poppins(
+                textStyle: TextStyle(
+                  color: Colors.black,
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
             icon: Icon(
               currentTab == 0 ? Mdi.home : Mdi.homeOutline,
               size: 30,
@@ -53,7 +65,16 @@ class _HomePageState extends State<HomePage> {
             textAlign: TextAlign.center,
           ),
           BottomNavyBarItem(
-            title: Text('Quiz'),
+            title: Text(
+              'Quiz',
+              style: GoogleFonts.poppins(
+                textStyle: TextStyle(
+                  color: Colors.black,
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
             textAlign: TextAlign.center,
             icon: Icon(
               currentTab == 1
@@ -65,10 +86,38 @@ class _HomePageState extends State<HomePage> {
             inactiveColor: Colors.black54,
           ),
           BottomNavyBarItem(
-            title: Text('Books'),
+            title: Text(
+              'Books',
+              style: GoogleFonts.poppins(
+                textStyle: TextStyle(
+                  color: Colors.black,
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
             textAlign: TextAlign.center,
             icon: Icon(
               currentTab == 2 ? Mdi.book : Mdi.bookOutline,
+              size: 30,
+            ),
+            activeColor: Colors.black,
+            inactiveColor: Colors.black54,
+          ),
+          BottomNavyBarItem(
+            title: Text(
+              'Covid\'19',
+              style: GoogleFonts.poppins(
+                textStyle: TextStyle(
+                  color: Colors.black,
+                  fontSize: 16.0,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
+            ),
+            textAlign: TextAlign.center,
+            icon: Icon(
+              currentTab == 3 ? Mdi.virus : Mdi.virusOutline,
               size: 30,
             ),
             activeColor: Colors.black,
