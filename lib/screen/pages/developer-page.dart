@@ -1,3 +1,4 @@
+import 'package:better_learn_programming/widgets/developer/dev-info.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:mdi/mdi.dart';
@@ -41,7 +42,7 @@ class DeveloperPage extends StatelessWidget {
         children: [
           Container(
             decoration: BoxDecoration(
-              color: Colors.pink[50],
+              color: Color(0xfff5e6d3),
               borderRadius: BorderRadius.only(
                 bottomRight: Radius.circular(40),
               ),
@@ -61,7 +62,7 @@ class DeveloperPage extends StatelessWidget {
               height: double.infinity,
               width: double.infinity,
               decoration: BoxDecoration(
-                color: Colors.pink[50],
+                color: Color(0xfff5e6d3),
                 borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(40),
                 ),
@@ -71,12 +72,12 @@ class DeveloperPage extends StatelessWidget {
                   top: 15,
                 ),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceAround,
                       children: [
-                        ClipRRect(
+                        /*ClipRRect(
                           borderRadius: BorderRadius.circular(400),
                           child: Image.asset(
                             'images/ripplebee_logo.png',
@@ -85,7 +86,7 @@ class DeveloperPage extends StatelessWidget {
                             fit: BoxFit.contain,
                             alignment: Alignment.centerLeft,
                           ),
-                        ),
+                        ), */
                         Container(
                           height: MediaQuery.of(context).size.height * .1,
                           width: MediaQuery.of(context).size.width * .6,
@@ -122,7 +123,7 @@ class DeveloperPage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Row(
+                    /* Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
                         IconButton(
@@ -165,6 +166,7 @@ class DeveloperPage extends StatelessWidget {
                         )
                       ],
                     ),
+                   
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.end,
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -198,7 +200,24 @@ class DeveloperPage extends StatelessWidget {
                           ),
                         ),
                       ],
+                    ), */
+                    Spacer(),
+                    DevInfo(
+                      imgPath: 'images/munna.jpg',
+                      name: 'Fahim Muntashir',
+                      uniName: 'North South University (NSU)',
                     ),
+                    DevInfo(
+                      imgPath: 'images/arnob.jpg',
+                      name: 'Nafis Mahmud Arnob',
+                      uniName: 'Bangladesh University of Textiles (BUTex)',
+                    ),
+                    DevInfo(
+                      imgPath: 'images/mueed.jpg',
+                      name: 'Abdul Mueed',
+                      uniName: 'North South University (NSU)',
+                    ),
+                    Spacer(),
                   ],
                 ),
               ),

@@ -38,7 +38,7 @@ class _SplashScreenState extends State<SplashScreen> {
                     ),
                     SizedBox(height: 20),
                     Text(
-                      'Better Learn Programming',
+                      'Learn Programming',
                       style: GoogleFonts.poppins(
                         letterSpacing: .7,
                         textStyle: TextStyle(
@@ -51,7 +51,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   ],
                 ),
                 Spacer(),
-                Center(
+              Center(
                   child: Column(
                     children: [
                       Padding(
@@ -62,7 +62,7 @@ class _SplashScreenState extends State<SplashScreen> {
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: [
                             Text(
-                              'Powered by ',
+                              '0xe5e2e7 ',
                               style: GoogleFonts.ubuntu(
                                 textStyle: TextStyle(
                                   color: Color(0xff8c8798),
@@ -72,11 +72,11 @@ class _SplashScreenState extends State<SplashScreen> {
                                 ),
                               ),
                             ),
-                            Image.asset(
-                              'images/ripplebee-transparent.png',
-                              height: 60,
-                              width: 60,
-                            ),
+                            // Image.asset(
+                            //   'images/ripplebee-transparent.png',
+                            //   height: 60,
+                            //   width: 60,
+                            // ),
                           ],
                         ),
                       ),

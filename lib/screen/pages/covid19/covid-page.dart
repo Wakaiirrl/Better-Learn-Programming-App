@@ -3,7 +3,6 @@ import 'dart:convert';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:better_learn_programming/models/country-covid-model.dart';
 import 'package:better_learn_programming/widgets/covid19/world-covid-info.dart';
-import 'package:connectivity/connectivity.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:http/http.dart' as Http;
@@ -187,7 +186,7 @@ class _CovidPageState extends State<CovidPage> {
                           child: SingleChildScrollView(
                             child: Container(
                               height: MediaQuery.of(context).size.height,
-                              margin: EdgeInsets.only(top: 10),
+                             margin: EdgeInsets.only(bottom: 10),
                               decoration: BoxDecoration(
                                 color: Colors.pink[50],
                                 borderRadius: BorderRadius.only(
