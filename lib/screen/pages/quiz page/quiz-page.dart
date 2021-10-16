@@ -2,7 +2,6 @@ import 'package:better_learn_programming/database/quiz-question.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 import '../topic-page.dart';
 
 class QuizPage extends StatefulWidget {
@@ -25,7 +24,7 @@ class _QuizPageState extends State<QuizPage> {
           style: GoogleFonts.ubuntu(
             textStyle: TextStyle(
               color: Colors.white,
-              fontSize: 30,
+              fontSize: 26,
             ),
           ),
         ),
@@ -54,7 +53,12 @@ class _QuizPageState extends State<QuizPage> {
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     SizedBox(height: height * .02),
-                    SvgPicture.asset('images/dedicated-team.svg'),
+                    SvgPicture.asset(
+                      'images/quiz.svg',
+                      height: height * .3,
+                      width: double.infinity,
+                      fit: BoxFit.contain,
+                    ),
                     SizedBox(height: height * .02),
                     question(),
                     Padding(

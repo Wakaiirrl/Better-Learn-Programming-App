@@ -51,7 +51,7 @@ class _SplashScreenState extends State<SplashScreen> {
                   ],
                 ),
                 Spacer(),
-              Center(
+                Center(
                   child: Column(
                     children: [
                       Padding(

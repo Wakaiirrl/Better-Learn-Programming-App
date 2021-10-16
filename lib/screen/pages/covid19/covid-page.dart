@@ -166,11 +166,11 @@ class _CovidPageState extends State<CovidPage> {
                             ),
                             Container(
                               height: MediaQuery.of(context).size.height * .30,
-                              width: MediaQuery.of(context).size.width * .33,
+                              width: MediaQuery.of(context).size.width * .35,
                               decoration: BoxDecoration(
                                 image: DecorationImage(
                                   image: AssetImage('images/bacteria.png'),
-                                  fit: BoxFit.contain,
+                                  fit: BoxFit.cover,
                                 ),
                               ),
                             )

@@ -1,5 +1,6 @@
 import 'package:better_learn_programming/provider/online%20books/online-books-provider.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:auto_size_text/auto_size_text.dart';
@@ -35,9 +36,9 @@ class _OnlineBookPageState extends State<OnlineBookPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffece4dc),
+      backgroundColor: Color(0xfffee8d6),
       appBar: AppBar(
-        backgroundColor: Color(0xffece4dc),
+        backgroundColor: Color(0xfffee8d6),
         elevation: 0.0,
         title: Text(
           'Online Books',
@@ -61,31 +62,40 @@ class _OnlineBookPageState extends State<OnlineBookPage> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Container(
                               height: MediaQuery.of(context).size.height * .2,
                               padding: EdgeInsets.symmetric(
                                   horizontal: 20, vertical: 10),
-                              child: Text(
+                              child: AutoSizeText(
                                 'Get Essential\nBooks!',
-                                style: GoogleFonts.poppins(
+                                maxLines: 2,
+                                minFontSize: 24,
+                                style: GoogleFonts.ubuntu(
                                   textStyle: TextStyle(
-                                    color: Colors.teal[600],
-                                    fontSize: 34,
+                                    color: Colors.brown,
+                                    fontSize: 28,
                                     fontWeight: FontWeight.w600,
                                   ),
                                 ),
                               ),
                             ),
+                            SvgPicture.asset(
+                              'images/analysis.svg',
+                              fit: BoxFit.cover,
+                              height: 150,
+                              width: 200,
+                            ),
                           ],
                         ),
                         SizedBox(
-                          height: MediaQuery.of(context).size.height * .02,
+                          height: 20,
                         ),
                         Expanded(
                           child: Container(
                             decoration: BoxDecoration(
-                              color: Color(0xffe5ccbd),
+                              color: Color(0xffefc5b5),
                               borderRadius: BorderRadius.only(
                                 topLeft: Radius.circular(25),
                                 topRight: Radius.circular(25),
@@ -136,14 +146,14 @@ class _OnlineBookPageState extends State<OnlineBookPage> {
                                                 .size
                                                 .height,
                                             margin: EdgeInsets.symmetric(
-                                                horizontal: 10, vertical: 30),
-                                            decoration: BoxDecoration(
+                                                horizontal: 10, vertical: 20),
+                                             decoration: BoxDecoration(
                                               gradient: LinearGradient(
                                                 begin: Alignment.topCenter,
                                                 end: Alignment.bottomCenter,
                                                 colors: [
-                                                  Colors.red[200],
-                                                  Colors.orange[200],
+                                                  Color(0xfff6eed5),
+                                                  Color(0xffe3d3bf),
                                                 ],
                                               ),
                                               borderRadius:

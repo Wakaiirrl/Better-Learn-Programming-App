@@ -109,7 +109,7 @@ class _TopicPageState extends State<TopicPage> {
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    //crossAxisAlignment: CrossAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Container(
                         width: width * .5,
@@ -145,12 +145,12 @@ class _TopicPageState extends State<TopicPage> {
                         ),
                       ),
                       Container(
-                        child: FittedBox(
-                          child: Image.asset(
-                            'images/dev.png',
-                            height: height * .25,
-                            width: width * .45,
-                            alignment: Alignment.center,
+                        height: MediaQuery.of(context).size.height * .25,
+                        width: MediaQuery.of(context).size.width * .45,
+                        decoration: BoxDecoration(
+                          image: DecorationImage(
+                            image: AssetImage('images/dev.png'),
+                            fit: BoxFit.cover,
                           ),
                         ),
                       )

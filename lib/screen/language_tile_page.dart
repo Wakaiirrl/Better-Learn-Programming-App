@@ -11,6 +11,7 @@ import 'package:better_learn_programming/provider/Topics/topic_9.dart';
 import 'package:better_learn_programming/screen/programming_language_study.dart';
 import 'package:better_learn_programming/widgets/category-tile.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class LanguageTilePage extends StatelessWidget {
@@ -56,15 +57,15 @@ class LanguageTilePage extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Image.asset(
-                'images/web-development.png',
-                width: width * .5,
-                height: height * .3,
+              SvgPicture.asset(
+                'images/report.svg',
+                width: width * .25,
+                height: height * .2,
                 alignment: Alignment.centerLeft,
               ),
               Image.asset(
                 languageTile.imagePath,
-                width: width * .5,
+                width: width * .4,
                 height: height * .25,
                 alignment: Alignment.centerRight,
               ),
