@@ -8,7 +8,7 @@ import 'package:provider/provider.dart';
 
 void main() {
   WidgetsFlutterBinding
-      .ensureInitialized(); // needs to be called because run app isn't called first
+      .ensureInitialized(); 
   // MobileAds.instance.initialize();
   runApp(MyApp());
 }

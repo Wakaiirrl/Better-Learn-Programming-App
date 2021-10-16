@@ -65,7 +65,7 @@ class _OnlineBookPageState extends State<OnlineBookPage> {
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
                             Container(
-                              height: MediaQuery.of(context).size.height * .2,
+                              // height: MediaQuery.of(context).size.height * .2,
                               padding: EdgeInsets.symmetric(
                                   horizontal: 20, vertical: 10),
                               child: AutoSizeText(
@@ -74,19 +74,21 @@ class _OnlineBookPageState extends State<OnlineBookPage> {
                                 minFontSize: 24,
                                 style: GoogleFonts.ubuntu(
                                   textStyle: TextStyle(
-                                    color: Colors.brown,
+                                    color: Color(0xff76424e),
                                     fontSize: 28,
                                     fontWeight: FontWeight.w600,
                                   ),
                                 ),
                               ),
                             ),
-                            SvgPicture.asset(
-                              'images/analysis.svg',
-                              fit: BoxFit.cover,
-                              height: 150,
-                              width: 200,
-                            ),
+                            Container(
+                              child: SvgPicture.asset(
+                                'images/analysis.svg',
+                                fit: BoxFit.contain,
+                                height: MediaQuery.of(context).size.height * .2,
+                                width: MediaQuery.of(context).size.width * .2,
+                              ),
+                            )
                           ],
                         ),
                         SizedBox(
@@ -147,7 +149,7 @@ class _OnlineBookPageState extends State<OnlineBookPage> {
                                                 .height,
                                             margin: EdgeInsets.symmetric(
                                                 horizontal: 10, vertical: 20),
-                                             decoration: BoxDecoration(
+                                            decoration: BoxDecoration(
                                               gradient: LinearGradient(
                                                 begin: Alignment.topCenter,
                                                 end: Alignment.bottomCenter,
@@ -198,14 +200,14 @@ class _OnlineBookPageState extends State<OnlineBookPage> {
                                                   child: AutoSizeText(
                                                     bookObject.getBooksData
                                                         .books[index].title,
-                                                    maxLines: 2,
+                                                    maxLines: 3,
                                                     minFontSize: 16,
                                                     textAlign: TextAlign.center,
-                                                    style: GoogleFonts.roboto(
+                                                    style: GoogleFonts.rubik(
                                                       textStyle: TextStyle(
                                                         color: Colors.black,
                                                         fontWeight:
-                                                            FontWeight.bold,
+                                                            FontWeight.w400,
                                                         fontSize: 18,
                                                       ),
                                                     ),

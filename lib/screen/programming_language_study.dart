@@ -115,6 +115,7 @@ class _ProgrammingLanguageStudyState extends State<ProgrammingLanguageStudy> {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Container(
+                          width :double.infinity,
                           padding: EdgeInsets.symmetric(
                             horizontal: 15,
                             vertical: 15,
@@ -123,64 +124,59 @@ class _ProgrammingLanguageStudyState extends State<ProgrammingLanguageStudy> {
                             color: Colors.red[50],
                             borderRadius: BorderRadius.circular(10),
                           ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              SafeArea(
-                                child: Column(
-                                  crossAxisAlignment: CrossAxisAlignment.start,
-                                  children: [
-                                    Text(
-                                      programmingLanguage.name,
-                                      style: TextStyle(
-                                        fontFamily: 'Ubuntu',
-                                        fontSize: 30,
-                                        fontWeight: FontWeight.bold,
-                                        letterSpacing: 1,
-                                        color: Color(0xff5c4450),
-                                      ),
-                                    ),
-                                    SizedBox(
-                                      height: 20,
-                                    ),
-                                    Text(
-                                      programmingLanguage.info,
-                                      style: TextStyle(
-                                        fontFamily: 'Roboto',
-                                        fontSize: 20,
-                                        fontWeight: FontWeight.w600,
-                                        color: Color(0xff8c8798),
-                                      ),
-                                    ),
-                                  ],
+                              Text(
+                                programmingLanguage.name,
+                                style: TextStyle(
+                                  fontFamily: 'Ubuntu',
+                                  fontSize: 30,
+                                  fontWeight: FontWeight.bold,
+                                  letterSpacing: 1,
+                                  color: Color(0xff5c4450),
+                                ),
+                              ),
+                              SizedBox(
+                                height: 20,
+                              ),
+                              Text(
+                                programmingLanguage.info,
+                                style: TextStyle(
+                                  fontFamily: 'Roboto',
+                                  fontSize: 20,
+                                  fontWeight: FontWeight.w600,
+                                  color: Color(0xff8c8798),
                                 ),
                               ),
                             ],
                           ),
                         ),
-                        SizedBox(
-                          height: height / 50,
-                        ),
-                        Container(
-                          margin: EdgeInsets.only(
-                            bottom: 5,
-                          ),
-                          width: double.infinity,
-                          padding: EdgeInsets.symmetric(
-                              horizontal: 15, vertical: 15),
-                          decoration: BoxDecoration(
-                            color: Colors.blueGrey[50],
-                            borderRadius: BorderRadius.circular(10),
-                          ),
-                          child: Text(
-                            programmingLanguage.description,
-                            style: TextStyle(
-                                fontFamily: 'Roboto',
-                                fontSize: 20,
-                                color: Colors.black54),
-                          ),
-                        ),
-                        /*_isBannerAdReady
+                      ],
+                    ),
+                    SizedBox(
+                      height: height / 50,
+                    ),
+                    Container(
+                      margin: EdgeInsets.only(
+                        bottom: 5,
+                      ),
+                      width: double.infinity,
+                      padding:
+                          EdgeInsets.symmetric(horizontal: 15, vertical: 15),
+                      decoration: BoxDecoration(
+                        color: Colors.blueGrey[50],
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      child: Text(
+                        programmingLanguage.description,
+                        style: TextStyle(
+                            fontFamily: 'Roboto',
+                            fontSize: 20,
+                            color: Colors.black54),
+                      ),
+                    ),
+                    /*_isBannerAdReady
                             ? Align(
                                 alignment: Alignment.bottomCenter,
                                 child: Container(
@@ -192,85 +188,81 @@ class _ProgrammingLanguageStudyState extends State<ProgrammingLanguageStudy> {
                             : Container(
                                 height: 0,
                               ),*/
-                        GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (BuildContext context) =>
-                                    LanguageTilePage(
-                                  id: programmingLanguage.id,
-                                ),
-                              ),
-                            );
-                          },
-                          child: Container(
-                            margin: EdgeInsets.only(
-                              top: 5,
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (BuildContext context) => LanguageTilePage(
+                              id: programmingLanguage.id,
                             ),
-                            decoration: BoxDecoration(
-                                color: Colors.purple[50],
-                                borderRadius: BorderRadius.circular(10)),
-                            child: ListTile(
-                              leading: Container(
-                                child: FittedBox(
-                                  child: Image.asset(
-                                      programmingLanguage.imagePath),
-                                ),
-                              ),
-                              title: Text(
-                                'Learn ${programmingLanguage.name}',
-                                style: GoogleFonts.poppins(
-                                  textStyle: TextStyle(
-                                    color: Colors.teal[700],
-                                    fontWeight: FontWeight.w600,
-                                    fontSize: 20,
-                                    letterSpacing: 1,
-                                  ),
-                                ),
-                              ),
-                              subtitle: Text(
-                                'Basic to Advanced',
-                                style: GoogleFonts.poppins(
-                                  textStyle: TextStyle(
-                                    color: Colors.black54,
-                                    fontWeight: FontWeight.w500,
-                                  ),
-                                ),
-                              ),
-                              trailing: GestureDetector(
-                                onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => LanguageTilePage(),
-                                    ),
-                                  );
-                                },
-                                child: IconButton(
-                                  padding: EdgeInsets.zero,
-                                  icon: Icon(
-                                    Mdi.arrowRightCircleOutline,
-                                    size: 30,
-                                    color: Colors.black45,
-                                  ),
-                                  onPressed: () {
-                                    Navigator.push(
-                                      context,
-                                      MaterialPageRoute(
-                                        builder: (BuildContext context) =>
-                                            LanguageTilePage(
-                                          id: programmingLanguage.id,
-                                        ),
-                                      ),
-                                    );
-                                  },
-                                ),
+                          ),
+                        );
+                      },
+                      child: Container(
+                        margin: EdgeInsets.only(
+                          top: 5,
+                        ),
+                        decoration: BoxDecoration(
+                            color: Colors.purple[50],
+                            borderRadius: BorderRadius.circular(10)),
+                        child: ListTile(
+                          leading: Container(
+                            child: FittedBox(
+                              child: Image.asset(programmingLanguage.imagePath),
+                            ),
+                          ),
+                          title: Text(
+                            'Learn ${programmingLanguage.name}',
+                            style: GoogleFonts.poppins(
+                              textStyle: TextStyle(
+                                color: Colors.teal[700],
+                                fontWeight: FontWeight.w600,
+                                fontSize: 20,
+                                letterSpacing: 1,
                               ),
                             ),
                           ),
+                          subtitle: Text(
+                            'Basic to Advanced',
+                            style: GoogleFonts.poppins(
+                              textStyle: TextStyle(
+                                color: Colors.black54,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ),
+                          trailing: GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) => LanguageTilePage(),
+                                ),
+                              );
+                            },
+                            child: IconButton(
+                              padding: EdgeInsets.zero,
+                              icon: Icon(
+                                Mdi.arrowRightCircleOutline,
+                                size: 30,
+                                color: Colors.black45,
+                              ),
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (BuildContext context) =>
+                                        LanguageTilePage(
+                                      id: programmingLanguage.id,
+                                    ),
+                                  ),
+                                );
+                              },
+                            ),
+                          ),
                         ),
-                      ],
+                      ),
                     ),
                   ],
                 ),

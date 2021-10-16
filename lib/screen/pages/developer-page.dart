@@ -208,7 +208,7 @@ class DeveloperPage extends StatelessWidget {
                       uniName: 'North South University (NSU)',
                     ),
                     DevInfo(
-                      imgPath: 'images/arnob.jpg',
+                      imgPath: 'images/arnob.png',
                       name: 'Nafis Mahmud Arnob',
                       uniName: 'Bangladesh University of Textiles (BUTex)',
                     ),
